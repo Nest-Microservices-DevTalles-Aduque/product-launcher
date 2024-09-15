@@ -14,22 +14,22 @@ services:
     command: npm run start:dev
     env_file:
       - ./client-gateway/.env
-  ms-products:
-    build: ./products-ms
-    ports:
-      - 3001:3001
-    volumes:
-      - ./products-ms/src:/usr/src/app/src
-    command: npm run start:docker
-    env_file:
-      - ./products-ms/.env
-  ms-orders:
-    build: ./orders-ms
-    ports:
-      - 3502:3502
-    volumes:
-      - ./orders-ms/src:/usr/src/app/src
-    command: npm run start:docker
-    env_file:
-      - ./orders-ms/.env
+#  ms-products:
+#    build: ./products-ms
+#    ports:
+#      - 3001:3001
+#    volumes:
+#      - ./products-ms/src:/usr/src/app/src
+#    command: npm run start:docker
+#    env_file:
+#      - ./products-ms/.env
+#  ms-orders:
+#    build: ./orders-ms
+#    ports:
+#      - 3502:3502
+#    volumes:
+#      - ./orders-ms/src:/usr/src/app/src
+#    command: npm run start:docker
+#    env_file:
+#      - ./orders-ms/.env
 

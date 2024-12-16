@@ -32,4 +32,24 @@ services:
     command: npm run start:docker
     env_file:
       - ./orders-ms/.env
+  ms-payment:
+    container_name: payment_container
+    build: ./payment-ms
+    ports:
+      - 3503:3503
+    volumes:
+      - ./payment-ms/src:/usr/src/app/src
+    command: npm run start:dev
+    env_file:
+      - ./payment-ms/.env
+  ms-auth:
+    container_name: auth-ms
+    build: ./auth-ms
+    ports:
+      - 3504:3504
+    volumes:
+      - ./auth-ms/src:/usr/src/app/src
+    command: npm run start:dev
+    env_file:
+      - ./auth-ms/.env
 
